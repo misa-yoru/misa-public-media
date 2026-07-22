@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "削除せず、対象画像だけを表示する"
+        description: "削除せず、対象メディアだけを表示する"
         required: true
         type: boolean
         default: true
@@ -37,8 +37,8 @@ jobs:
           args=(
             --release-tag instagram-media
             --retention-days 30
-            --max-total-mb 500
-            --target-total-mb 400
+            --max-total-mb 5000
+            --target-total-mb 4000
           )
           if [[ "$DRY_RUN" == "true" ]]; then
             args+=(--dry-run)
