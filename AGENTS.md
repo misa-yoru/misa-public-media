@@ -5,6 +5,7 @@
 - Only upload media that the user has selected for publication.
 - Do not upload explicit sexual imagery, underwear-focused imagery, depictions of sexual acts, or media involving anyone who could appear underage.
 - Keep filenames unique and derived from a post ID plus a random suffix. Do not put personal information in filenames.
-- Do not claim that MP4 storage means Reels publishing is implemented. Reels publishing currently belongs to the future roadmap.
+- The private automation repository supports single-image posts, 2-to-10-item image/video carousels, and Reels. These formats are unit-tested but still require live-account publication tests.
+- Do not claim that Reels music selection is implemented.
 - When changing cleanup behavior, run `python -m unittest discover -s tests -v`.
 - Do not manually delete media outside the documented retention policy unless the user explicitly requests the exact deletion.
