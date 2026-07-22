@@ -126,11 +126,11 @@ class GitHubClient:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Clean old Instagram release assets")
+    parser = argparse.ArgumentParser(description="Clean old public Instagram media assets")
     parser.add_argument("--release-tag", default=DEFAULT_RELEASE_TAG)
     parser.add_argument("--retention-days", type=int, default=30)
-    parser.add_argument("--max-total-mb", type=int, default=500)
-    parser.add_argument("--target-total-mb", type=int, default=400)
+    parser.add_argument("--max-total-mb", type=int, default=5000)
+    parser.add_argument("--target-total-mb", type=int, default=4000)
     parser.add_argument("--dry-run", action="store_true")
     return parser
 
