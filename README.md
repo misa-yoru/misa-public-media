@@ -4,12 +4,12 @@ Instagram投稿時にMeta APIから取得できる、公開済みの完成メデ
 
 ## 公開するもの
 
-- Instagramへ投稿する最終版のJPG画像
-- 将来Reelsへ投稿する最終版のMP4動画
+- Instagramの画像1枚投稿・カルーセル投稿に使う最終版JPG画像
+- Instagramのカルーセル投稿・Reels投稿に使う最終版MP4動画
 - 投稿IDを含む、重複しにくいファイル名
 - GitHub Releasesの `instagram-media` Releaseに添付したファイル
 
-現在の自動投稿コードが対応しているのはJPGによる静止画投稿だけです。MP4は保存できますが、Reels自動投稿はまだ実装していません。
+非公開側の自動投稿コードは、画像1枚、画像・動画2～10件のカルーセル、Reelsに対応しています。カルーセルとReelsはコードと単体テストまで完了しており、実アカウントでの投稿テストはこれからです。ReelsへのInstagram音源指定は未対応です。
 
 ## 公開しないもの
 
@@ -27,7 +27,7 @@ Instagram投稿時にMeta APIから取得できる、公開済みの完成メデ
 https://github.com/misa-yoru/misa-public-media/releases/download/instagram-media/<filename>.<jpg-or-mp4>
 ```
 
-静止画投稿ではJPGのURLをInstagram Content Publishing APIの `image_url` に渡します。将来のReels投稿ではMP4のURLを `video_url` に渡します。
+JPGはInstagram Content Publishing APIの `image_url`、MP4は `video_url` に渡します。カルーセルでは各メディアのURLを並べ、Reelsでは公開MP4のURLを指定します。
 
 ## 自動整理
 
